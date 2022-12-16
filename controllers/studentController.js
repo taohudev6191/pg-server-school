@@ -2,7 +2,7 @@
 const slugify = require("slugify")
 const Students = require("../models/student")
 const Subjects = require("../models/subject")
-const Classrooms = require("../models/Classrooms");
+const Classrooms = require("../models/classrooms");
 const { v4: uuidv4 } = require('uuid');
 //บันทึกข้อมูล
 exports.create=(req,res)=>{
