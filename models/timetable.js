@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const timetableSchema=mongoose.Schema({
-    timetable:{
+    timetables:{
         type:Array,
         required:true
     }
