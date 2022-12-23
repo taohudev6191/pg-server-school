@@ -3,6 +3,7 @@ const slugify = require("slugify")
 const Students = require("../models/student")
 const Subjects = require("../models/subject")
 const Classrooms = require("../models/classrooms");
+const Timetable = require("../models/timetable");
 const { v4: uuidv4 } = require('uuid');
 //บันทึกข้อมูล
 exports.create=(req,res)=>{
@@ -51,7 +52,14 @@ exports.getAllStudents=(req,res)=>{
         res.json(stds)
     })
 }
-
+exports.getAllTimetable=(req,res)=>{
+    Timetable.find({}).exec((err,cr)=>{
+        if(err){
+            res.status(400).json({error:"ไม่พบข้อมูล"})
+        }
+        res.json(cr)
+    })
+}
 //ดึงบทความที่สนใจอ้างอิงตาม slug
 exports.singleStudent=(req,res)=>{
     const {student_id} = req.body
