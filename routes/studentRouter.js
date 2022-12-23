@@ -1,6 +1,6 @@
 const express=require("express")
 const router = express.Router()
-const {create, getAllStudents, singleStudent,remove, update, getAllClassroom, getAllSubject, test} = require("../controllers/studentController")
+const {create, getAllStudents, singleStudent,remove, update, getAllClassroom, getAllSubject, test,getTimetable} = require("../controllers/studentController")
 
 router.post('/createstudent',create)
 
@@ -15,5 +15,7 @@ router.delete('/removestudent',remove)
 router.put('/updatestudent',update)
 
 router.get('/test',test)
+
+router.get('/gettimetable',getTimetable)
 
 module.exports=router
