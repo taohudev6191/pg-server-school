@@ -3,11 +3,11 @@ const slugify = require("slugify")
 const Students = require("../models/student")
 const Subjects = require("../models/subject")
 const Classrooms = require("../models/classrooms");
-const Timetable = require("../models/timetable");
+const newStudent = require("../models/newStudent");
 const { v4: uuidv4 } = require('uuid');
 //บันทึกข้อมูล
 exports.create=(req,res)=>{
-    const {keyUnitySecret,student_id,sex,fname,lname,age,classroom_id,subjects}=req.body
+    const {keyUnitySecret,student_id,sex,fname,lname,age,classroom_id,subjects,newStudent}=req.body
 
     /* เช็กกรอกข้อมูลไม่ครบ
     switch(true){
@@ -52,12 +52,12 @@ exports.getAllStudents=(req,res)=>{
         res.json(stds)
     })
 }
-exports.getTimetable=(req,res)=>{
-    Timetable.find({}).exec((err,cr)=>{
+exports.getAllnewStudent=(req,res)=>{
+    newStudent.find({}).exec((err,nsd)=>{
         if(err){
             res.status(400).json({error:"ไม่พบข้อมูล"})
         }
-        res.json(cr)
+        res.json(nsd)
     })
 }
 //ดึงบทความที่สนใจอ้างอิงตาม slug
