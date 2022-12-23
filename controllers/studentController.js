@@ -7,7 +7,7 @@ const newStudent = require("../models/newStudent");
 const { v4: uuidv4 } = require('uuid');
 //บันทึกข้อมูล
 exports.create=(req,res)=>{
-    const {keyUnitySecret,student_id,sex,fname,lname,age,classroom_id,subjects,newStudent}=req.body
+    const {keyUnitySecret,student_id,sex,fname,lname,age,classroom_id,subjects}=req.body
 
     /* เช็กกรอกข้อมูลไม่ครบ
     switch(true){
