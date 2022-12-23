@@ -5,6 +5,6 @@ const timetableSchema=mongoose.Schema({
         type:Array,
         required:true
     }
-}
+},{timestamps:false})
 
 module.exports = mongoose.model("Timetable",timetableSchema)
