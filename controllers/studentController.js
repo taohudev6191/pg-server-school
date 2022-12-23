@@ -52,7 +52,7 @@ exports.getAllStudents=(req,res)=>{
         res.json(stds)
     })
 }
-exports.getAllTimetable=(req,res)=>{
+exports.getTimetable=(req,res)=>{
     Timetable.find({}).exec((err,cr)=>{
         if(err){
             res.status(400).json({error:"ไม่พบข้อมูล"})
