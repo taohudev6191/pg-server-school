@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const stdreq = require("std")
+const std = require("../models/std")
 
 const testdataSchema=mongoose.Schema({
     std:{
