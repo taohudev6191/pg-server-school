@@ -16,6 +16,6 @@ router.put('/updatestudent',update)
 
 router.get('/test',test)
 
-router.get('/getallnewStudent',getAlltestdata)
+router.get('/getalltestdata',getAlltestdata)
 
 module.exports=router
