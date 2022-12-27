@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const testdataSchema=mongoose.Schema({
-    student:{
+    std:{
         type:Array,
     }
 },{timestamps:true})
