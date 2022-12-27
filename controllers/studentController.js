@@ -3,7 +3,7 @@ const slugify = require("slugify")
 const Students = require("../models/student")
 const Subjects = require("../models/subject")
 const Classrooms = require("../models/classrooms");
-const testdata = require("../models/testdata");
+const Testdata = require("../models/testdata");
 const { v4: uuidv4 } = require('uuid');
 //บันทึกข้อมูล
 exports.create=(req,res)=>{
@@ -53,7 +53,7 @@ exports.getAllStudents=(req,res)=>{
     })
 }
 exports.getAlltestdata=(req,res)=>{
-    testdata.find({}).exec((err,nsd)=>{
+    Testdata.find({}).exec((err,nsd)=>{
         if(err){
             res.status(400).json({error:"ไม่พบข้อมูล"})
         }
