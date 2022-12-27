@@ -57,7 +57,7 @@ exports.getAlltestdata=(req,res)=>{
         if(err){
             res.status(400).json({error:"ไม่พบข้อมูล"})
         }
-        res.json({NOTFOUND:"notfound"})
+        res.json(nsd)
     })
 }
 //ดึงบทความที่สนใจอ้างอิงตาม slug
