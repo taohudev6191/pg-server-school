@@ -1,10 +1,14 @@
 const mongoose = require("mongoose")
-const std = require("../models/std")
+const stdreq = require("../models/std")
 
 const testdataSchema=mongoose.Schema({
-    std:{
-        type:Array,
-    }
+    std:[{ 
+        id: String,
+        gender: String,
+        fname: String,
+        age: String,
+        classroom: String,
+    }]
 },{timestamps:true})
 
 module.exports = mongoose.model("testdata",testdataSchema)
