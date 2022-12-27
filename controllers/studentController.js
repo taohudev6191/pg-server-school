@@ -57,7 +57,6 @@ exports.getAlltestdata=(req,res)=>{
         if(err){
             res.status(400).json({error:"ไม่พบข้อมูล"})
         }
-        res.json(nsd)
         res.json({NOTFOUND:"notfound"})
     })
 }
